@@ -14,29 +14,29 @@ body {
 }
 
 .menu {
-    width: 7rem;
-    height: 100vh;
+    width: 5rem;
+    height: 95vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     background: #212750;
     margin: 1rem;
     border-radius: 3rem;
-    position: relative;
+    padding-bottom: 2rem;
 }
 
 .logo {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 80px 0 100px 0;
+    padding: 80px 0 70px 0;
 }
 
 .logo img {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     object-fit: fill;
 }
 
@@ -47,50 +47,285 @@ body {
     justify-content: space-around;
 }
 
-li {
+.menu-itens li {
     padding: 10px;
-    font-size: 30px;
+    font-size: 25px;
     text-align: center;
-    padding: 30px 0 20px 0;
+    padding: 20px 0 20px 0;
     transition: .5s;
 }
 
 li:hover {
     color: #E974FF;
 }
+.main{
+    position: relative;
+    width: 850px;
+    height: 100vh;
+    padding: 2rem;
+}
+
+.welcome{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+}
+.search {
+    width: 200px;
+    height: 40px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    text-align: center;
+}
+.search ul li {
+    display: inline;
+    margin: 10px;
+
+}
+.games{
+    padding-bottom: 20px;
+    font-size: 12px;
+}
+.title-games{
+    padding-bottom: 17px;
+}
+.container-games{
+    height: 150px;
+    background: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.cards-carrousel {
+    width:  100%;
+    height: 140px;
+    position: absolute;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    background: green;
+}
+.cards-carrousel .card{
+    width:  130px;
+    height: 100px;
+    padding: 10px;
+    border:none;
+    border-radius: 10px;
+    background: blue;
+    transition: .5s;
+}
+
+.cards-carrousel .card:hover{
+    transform: scale(1.5);
+}
+
+.last-played{
+    padding-bottom: 5px;
+    font-size: 10px;
+}
+.title-last{
+    padding-bottom: 10px;
+}
+.container-last-games{
+    height: 50px;
+    background: red;
+}
+.game-type{
+    padding-bottom: 20px;
+    font-size: 12px;
+}
+.title-type{
+    padding-bottom: 17px;
+}
+.container-type-games{
+    height: 190px;
+    background: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.cards-carrousel-type {
+    width:  100%;
+    height: 180px;
+    position: absolute;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    background: green;
+}
+.cards-carrousel-type .card{
+    width:  160px;
+    height: 180px;
+    padding: 10px;
+    border:none;
+    border-radius: 10px;
+    background: blue;
+    transition: .5s;
+}
 
 .game-info {
-    width: 25rem;
-    height: 100vh;
+    width: 20rem;
+    height: 95vh;
     margin: 1rem;
+    padding-top: 1rem;
     background: #212750;
     border-radius: 2rem;
     position: fixed;
     top: 0;
-    right: 0rem;
+    right: 0;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-info h3{
+    font-size: 16px;
+    padding-bottom: 20px;
+}
+.game-info p{
+    font-size: 14px;
+    padding-bottom: 20px;
 }
 
 .game-title {
-    width: 22rem;
-    height: 20rem;
     display: flex;
-    margin: 20px;
+    justify-content: right;
+    padding-bottom: 10px;
+    font-size: 12px;
+}
+
+
+.image{
+    width: 18rem;
+    height:120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+.image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+    object-fit: fill;
+}
+
+.about{
+    width: 18rem;
+    height: 12rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2rem;
+    
+}
+
+.rating{
+    width: 18rem;
+    height: 12rem;
+    display: flex;
     flex-direction: column;
     border-radius: 2rem;
 }
-
-.game-title .image {
-    width: 22rem;
-    height: 10rem;
-    border-radius: 2rem;
+.rating-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 20px;
+}
+.rating .card-rating {
+    width: 18rem;
+    height: 5rem;
+    padding-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
 }
 
-.game-title .image img {
-    width: 22rem;
-    height: 10rem;
+.card-rating .card{
+    position: relative;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-rating .card .box{
+    position: absolute;
+    top: 0;
+    Left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    border-radius: 10px;
+}
+
+.circle{
+    position: relative;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circle .number{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle .number h2{
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+svg{
+    position: relative;
+    height: 50px;
+    width:  50px;
+}
+svg circle{
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke-width: 2;
+    stroke: rgba(255, 255, 255, 0.05);
+    transform: translate(5px,5px);
+    stroke-linecap: round;
+}
+svg circle:nth-child(2){
+    stroke: rgb(241, 19, 230);
+    stroke-dasharray: 125px;
+    stroke-dashoffset: 125px;
+}
+.card:nth-child(1) svg circle:nth-child(2){
+    stroke-dashoffset: calc(125px - ((125px * 80) / 100));
+}
+.card:nth-child(2) svg circle:nth-child(2){
+    stroke-dashoffset: calc(125px - ((125px * 86) / 100));
+}
+.card:nth-child(3) svg circle:nth-child(2){
+    stroke-dashoffset: calc(125px - ((125px * 70) / 100));
+}
+.trailer{
+    width: 18rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
     border-radius: 2rem;
-    padding-bottom: 20px;
-    object-fit: fill;
 }
