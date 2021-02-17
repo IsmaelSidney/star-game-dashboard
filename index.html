@@ -6,12 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <title>Star Games</title>
 </head>
 
 <body>
-    <nav class="menu">
+    <aside class="menu">
         <div class="logo">
             <img src="logo.png" alt="">
         </div>
@@ -24,11 +25,13 @@
                 <li><i class="fa fa-cog" aria-hidden="true"></i></li>
             </ul>
         </div>
-    </nav>
+    </aside>
     <section class="main">
         <div class="welcome">
-            <h1>Hi Ismael</h1>
-            <p>Welcome back, many new games waiting to be played</p>
+            <div class="msg">
+                <h1>Hi Ismael</h1>
+                <p>Welcome back, many new games waiting to be played</p>
+            </div>
             <div class="search">
                 <ul>
                     <li><i class="fa fa-search" aria-hidden="true"></i></li>
@@ -38,49 +41,111 @@
             </div>
         </div>
         <div class="games">
-            <h2>Games</h2>
+            <div class="title-games">
+                <h2>Games</h2>
+            </div>
+            <div class="container-games">
+                <div class="cards-carrousel">
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    
+                </div>
+            </div>
+
         </div>
         <div class="last-played">
-            <h2>Last Played</h2>
+            <div class="title-last">
+                <h2>Last Played</h2>
+            </div>
+            <div class="container-last-games">
+                <div class="cards-last-carrousel">
+                    <div class="card"></div>
+                </div>
+            </div>
         </div>
         <div class="game-type">
-            <h2>Games</h2>
+            <div class="title-type">
+                <h2>Action Games</h2>
+            </div>
+            <div class="container-type-games">
+                <div class="cards-carrousel-type">
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                </div>
+            </div>
         </div>
     </section>
     <aside class="game-info">
+        <div class="image">
+            <img src="header.jpg" alt="">
+        </div>
         <div class="game-title">
-            <div class="image">
-                <img src="header.jpg" alt="">
-            </div>
-
-            <h3>PlayerUnknown´s Battlegrounds</h2>
+            <h2>PlayerUnknown´s Battlegrounds</h2>
         </div>
         <div class="about">
-            <h2>About</h2>
-            <p>is a battle royale shooter that pits 100 players against each other in a struggle for survival. Gather supplies and outwit your opponents to become the last person standing.</p>
+            <h3>About</h3>
+            <p>is a battle royale shooter that pits 100 players against each other in a struggle for survival. Gather
+                supplies and outwit your opponents to become the last person standing.</p>
         </div>
         <div class="rating">
-            <h2>Rating</h2>
-            <h2>See all review</h2>
+            <div class="rating-title">
+                <h3>Rating</h>
+                    <h3>See all review</h3>
+            </div>
             <div class="card-rating">
-                <div class="circle">
-                    <h1 class="number">8</h1>
-                    <h2>Star Game</h2>
+                <div class="card">
+                    <div class="box">
+
+                        <div class="circle">
+                            <svg>
+                                <circle cx="20" cy="20" r="20"></circle>
+                                <circle cx="20" cy="20" r="20"></circle>
+                            </svg>
+                            <div class="number">
+                                <h2>8</h2>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="circle">
-                    <h2 class="number">86</h2>
-                    <h2>Metacritc</h2>
+                <div class="card">
+                    <div class="box">
+
+                        <div class="circle">
+                            <svg>
+                                <circle cx="20" cy="20" r="20"></circle>
+                                <circle cx="20" cy="20" r="20"></circle>
+                            </svg>
+                            <div class="number">
+                                <h2>86</h2>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="circle">
-                    <h1 class="number">7</h1>
-                    <h2>User Avg</h2>
+                <div class="card">
+                    <div class="box">
+
+                        <div class="circle">
+                            <svg>
+                                <circle cx="20" cy="20" r="20"></circle>
+                                <circle cx="20" cy="20" r="20"></circle>
+                            </svg>
+                            <div class="number">
+                                <h2>7</h2>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="trailer">
-            <h2>Trailer</h2>
-            <video src=""></video>
+            <h3>Trailer</h3>
+            <!-- <video src=""></video> -->
         </div>
+
     </aside>
 </body>
 
