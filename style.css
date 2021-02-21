@@ -58,19 +58,21 @@ body {
 li:hover {
     color: #E974FF;
 }
-.main{
+
+.main {
     position: relative;
     width: 850px;
     height: 100vh;
     padding: 2rem;
 }
 
-.welcome{
+.welcome {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding-bottom: 2rem;
 }
+
 .search {
     width: 200px;
     height: 40px;
@@ -80,124 +82,269 @@ li:hover {
     font-size: 20px;
     text-align: center;
 }
+
 .search ul li {
     display: inline;
     margin: 10px;
-
 }
-.games{
+
+.games {
     padding-bottom: 20px;
     font-size: 12px;
 }
-.title-games{
+
+.title-games {
     padding-bottom: 17px;
 }
-.container-games{
+
+.container-games {
     height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
 }
+
 .cards-carrousel {
-    width:  100%;
+    width: 100%;
     height: 140px;
     position: absolute;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-evenly;
-    
 }
-.cards-carrousel .card{
-    width:  130px;
+
+.cards-carrousel .card {
+    width: 130px;
     height: 100px;
     padding: 10px;
-    border:none;
+    border: none;
     border-radius: 10px;
-    transition: .5s;
+    transition: .5s ease-in-out;
+    position: relative;
 }
+
+.cards-carrousel .card .img-category {
+    position: absolute;
+    display: flex;
+    width: 100px;
+    height: 100px;
+    right: -20px;
+    top: -20px;
+}
+
+.cards-carrousel .card .img-category img {
+    width: 80px;
+    height: 80px;
+}
+
+.cards-carrousel .card:hover .img-category img {
+    transform: scale(1.7);
+}
+
+.cards-carrousel .card .content {
+    width: 100px;
+    height: 50px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    padding: 20px 0 0 10px;
+}
+
+.cards-carrousel .card .content img {
+    width: 30px;
+    padding-bottom: 5px;
+}
+
+.cards-carrousel .card .content h2 {
+    font-size: 10px;
+    padding-bottom: 2px;
+}
+
+.cards-carrousel .card .content p {
+    font-size: 10px;
+}
+
 
 /* .cards-carrousel .card:hover{
     transform: scale(1.5);
     
 } */
 
-.cards-carrousel .card:nth-child(1){
-    width:  190px;
+.cards-carrousel .card:hover {
+    width: 190px;
     height: 150px;
-    background-image: url('bg1.png');
+}
+
+.cards-carrousel .card:hover .content {
+    padding-top: 30px;
+    padding-left: 30px;
+    transform: scale(1.5);
+}
+
+.cards-carrousel .card:nth-child(1) {
+    /* width: 190px;
+    height: 150px; */
+    background-image: url('assets/bg1.png');
     background-position: center;
     background-repeat: no-repeat;
     filter: hue-rotate(90deg);
 }
-.cards-carrousel .card:nth-child(2){
-    background-image: url('bg6.png');
+
+.cards-carrousel .card:nth-child(2) {
+    background-image: url('assets/bg6.png');
     background-position: center;
     background-repeat: no-repeat;
     filter: hue-rotate(90deg);
 }
-.cards-carrousel .card:nth-child(3){
-    background-image: url('bg3.png');
+
+.cards-carrousel .card:nth-child(3) {
+    background-image: url('assets/bg3.png');
     background-position: center;
     background-repeat: no-repeat;
 }
-.cards-carrousel .card:nth-child(4){
-    background-image: url('bg4.png');
+
+.cards-carrousel .card:nth-child(4) {
+    background-image: url('assets/bg4.png');
     background-position: center;
     background-repeat: no-repeat;
 }
-.cards-carrousel .card:nth-child(5){
-    background-image: url('bg5.png');
+
+.cards-carrousel .card:nth-child(5) {
+    background-image: url('assets/bg5.png');
     background-position: center;
     background-repeat: no-repeat;
     filter: hue-rotate(90deg);
 }
-.last-played{
+
+.last-played {
     padding-bottom: 5px;
     font-size: 10px;
 }
-.title-last{
+
+.title-last {
     padding-bottom: 10px;
 }
-.container-last-games{
+
+.container-last-games {
     height: 50px;
-    background: red;
 }
-.game-type{
+
+.game-type {
     padding-bottom: 20px;
     font-size: 12px;
 }
-.title-type{
-    padding-bottom: 17px;
-}
-.container-type-games{
-    height: 190px;
-    background: red;
+
+.cards-last-carrousel {
+    width: 180px;
+    height: 100%;
     display: flex;
+    flex-direction: row;
+}
+
+.container-last-games .card {
+    width: 180px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.container-last-games .card .img {
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+}
+
+.container-last-games .card .img img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.container-last-games .card .content {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+}
+
+.container-last-games .card .content h2 {
+    font-size: 10px;
+    padding-bottom: 2px;
+}
+
+.container-last-games .card .content p {
+    font-size: 10px;
+    color: #6E64A5;
+}
+
+.container-type-games {
+    height: 190px;
+    display: flex;
     position: relative;
 }
+
+.title-type {
+    padding-bottom: 17px;
+}
+
 .cards-carrousel-type {
-    width:  100%;
     height: 180px;
     position: absolute;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-evenly;
-    background: green;
-}
-.cards-carrousel-type .card{
-    width:  160px;
-    height: 180px;
-    padding: 10px;
-    border:none;
-    border-radius: 10px;
-    background: blue;
-    transition: .5s;
 }
 
+.cards-carrousel-type .card {
+    width: 200px;
+    height: 180px;
+    border-radius: 20px;
+    display: flex;
+    margin-right: 16px;
+    flex-direction: column;
+    align-items: center;
+    transition: .5s;
+    background: #181D3F;
+    position: relative;
+    transition: .5s ease-in-out;
+}
+
+.cards-carrousel-type .card .image-box {
+    width: 200px;
+    height: 150px;
+    border-radius: 20px;
+    margin: 0;
+}
+
+.cards-carrousel-type .card .image-box img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.cards-carrousel-type .card h2 {
+    padding-top: 8px;
+    font-size: 12px;
+}
+
+.cards-carrousel-type .card::before {
+    content: '';
+    width: 200px;
+    height: 180px;
+    border: none;
+    border-radius: 20px;
+    background: #56419D;
+    position: absolute;
+    filter: opacity(0.3);
+    visibility: hidden;
+}
+
+.cards-carrousel-type .card:hover::before {
+    visibility: visible;
+}
 
 .game-info {
     width: 20rem;
@@ -215,11 +362,12 @@ li:hover {
     align-items: center;
 }
 
-.game-info h3{
+.game-info h3 {
     font-size: 16px;
     padding-bottom: 20px;
 }
-.game-info p{
+
+.game-info p {
     font-size: 14px;
     padding-bottom: 20px;
 }
@@ -231,15 +379,15 @@ li:hover {
     font-size: 12px;
 }
 
-
-.image{
+.image {
     width: 18rem;
-    height:120px;
+    height: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
     padding-bottom: 10px;
 }
+
 .image img {
     width: 100%;
     height: 100%;
@@ -247,44 +395,48 @@ li:hover {
     object-fit: fill;
 }
 
-.about{
-    width: 18rem;
-    height: 12rem;
-    display: flex;
-    flex-direction: column;
-    border-radius: 2rem;   
-}
-
-.rating{
+.about {
     width: 18rem;
     height: 12rem;
     display: flex;
     flex-direction: column;
     border-radius: 2rem;
 }
-.rating-title{
+
+.rating {
+    width: 18rem;
+    height: 12rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2rem;
+}
+
+.rating-title {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
-.rating-title h3{
+
+.rating-title h3 {
     padding: 0;
 }
-.rating-title .see{
+
+.rating-title .see {
     color: #E974FF;
     font-size: 12px;
 }
+
 .rating .card-rating {
     width: 18rem;
     height: 5rem;
     padding-left: 20px;
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 }
 
-.card-rating .card{
+.card-rating .card {
     position: relative;
     width: 70px;
     height: 70px;
@@ -293,12 +445,14 @@ li:hover {
     justify-content: center;
     align-items: center;
 }
-.card-rating .card h3{
-    padding:60px 0 0 0;
+
+.card-rating .card h3 {
+    padding: 60px 0 0 0;
     font-size: 10px;
     color: #7378a7;
 }
-.card-rating .card .box{
+
+.card-rating .card .box {
     position: absolute;
     top: 0;
     Left: 0;
@@ -311,7 +465,7 @@ li:hover {
     border-radius: 10px;
 }
 
-.circle{
+.circle {
     position: relative;
     width: 65px;
     height: 65px;
@@ -321,7 +475,8 @@ li:hover {
     align-items: center;
     justify-content: center;
 }
-.circle .number{
+
+.circle .number {
     position: absolute;
     height: 50px;
     width: 50px;
@@ -329,51 +484,59 @@ li:hover {
     justify-content: center;
     align-items: center;
 }
-.circle .number h2{
+
+.circle .number h2 {
     color: #fff;
     font-weight: 700;
     font-size: 20px;
 }
 
-svg{
+svg {
     position: relative;
     height: 50px;
-    width:  50px;
+    width: 50px;
 }
-svg circle{
+
+svg circle {
     width: 100%;
     height: 100%;
     fill: none;
     stroke-width: 2;
     stroke: rgba(255, 255, 255, 0.05);
-    transform: translate(5px,5px);
+    transform: translate(5px, 5px);
     stroke-linecap: round;
 }
-svg circle:nth-child(2){
+
+svg circle:nth-child(2) {
     stroke: rgb(241, 19, 230);
     stroke-dasharray: 125px;
     stroke-dashoffset: 125px;
 }
-.card:nth-child(1) svg circle:nth-child(2){
+
+.card:nth-child(1) svg circle:nth-child(2) {
     stroke-dashoffset: calc(125px - ((125px * 80) / 100));
 }
-.card:nth-child(2) svg circle:nth-child(2){
+
+.card:nth-child(2) svg circle:nth-child(2) {
     stroke-dashoffset: calc(125px - ((125px * 86) / 100));
 }
-.card:nth-child(3) svg circle:nth-child(2){
+
+.card:nth-child(3) svg circle:nth-child(2) {
     stroke-dashoffset: calc(125px - ((125px * 70) / 100));
 }
-.trailer{
+
+.trailer {
     width: 18rem;
     height: 20rem;
     display: flex;
-    
     flex-direction: column;
     border-radius: 2rem;
 }
-.trailer h3{
+
+.trailer h3 {
     padding-bottom: 5px;
 }
-iframe{
+
+iframe {
     border-radius: 20px;
 }
