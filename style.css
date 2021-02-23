@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     list-style: none;
+    outline: none;
 }
 
 body {
@@ -61,6 +62,11 @@ li:hover {
     color: #E974FF;
 }
 
+li.activeMenu {
+    color: #E974FF;
+    transform: scale(1.5);
+}
+
 .main {
     position: relative;
     width: 850px;
@@ -88,6 +94,19 @@ li:hover {
 .search ul li {
     display: inline;
     margin: 10px;
+    position: relative;
+}
+
+#bell::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    right: 2px;
+    border-radius: 50%;
+    border: 2px solid #090C2A;
+    ;
+    background: red;
 }
 
 .games {
@@ -95,8 +114,25 @@ li:hover {
     font-size: 12px;
 }
 
-.title-games {
+.title {
     padding-bottom: 17px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+}
+
+.title ul li {
+    display: inline;
+    margin-left: 20px;
+    font-size: 10px;
+    color: #E974FF;
+    transition: .5s;
+}
+
+.title li:hover {
+    color: #d01df0;
 }
 
 .container-games {
@@ -137,7 +173,8 @@ li:hover {
     right: -20px;
     top: -20px;
 }
-.cards-carrousel .card .img-category::before{
+
+.cards-carrousel .card .img-category::before {
     content: "";
     width: 60px;
     height: 50px;
@@ -151,13 +188,11 @@ li:hover {
     filter: blur(10px);
 }
 
-
 .cards-carrousel .card .img-category img {
     width: 80px;
     height: 80px;
     z-index: 2;
 }
-
 
 .cards-carrousel .card .content {
     width: 100px;
@@ -187,6 +222,7 @@ li:hover {
     transform: scale(1.5);
     
 } */
+
 .cards-carrousel .card.activeCategory .img-category img {
     transform: scale(1.7);
 }
@@ -238,12 +274,8 @@ li:hover {
 }
 
 .last-played {
-    padding-bottom: 5px;
-    font-size: 10px;
-}
-
-.title-last {
     padding-bottom: 10px;
+    font-size: 10px;
 }
 
 .container-last-games {
@@ -302,10 +334,6 @@ li:hover {
     height: 190px;
     display: flex;
     position: relative;
-}
-
-.title-type {
-    padding-bottom: 17px;
 }
 
 .cards-carrousel-type {
@@ -379,37 +407,35 @@ li:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: transform 500ms ease-in-out;
-   
+    transition: transform .5s ease-in-out;
 }
-.game-info > *{
-    
+
+.game-info>* {
     animation: fade-in .5s ease-in-out;
 }
 
-@keyframes fade-in{
-    0%{
+@keyframes fade-in {
+    0% {
         opacity: 0;
         transform: translateY(200px);
     }
-    /* 20%{
+    /* 20% {
         opacity: 0.2;
         transform: translateY(100px);
     }
-    40%{
+    40% {
         opacity: 0.4;
         transform: translateY(80px);
     }
-    60%{
+    60% {
         opacity: 0.6;
         transform: translateY(50px);
     }
-    80%{
+    80% {
         opacity: 0.8;
         transform: translateY(25px);
-    }
-     */
-    to{
+    } */
+    100% {
         opacity: 1;
         transform: translateY(0px);
     }
@@ -430,7 +456,6 @@ li:hover {
     justify-content: right;
     padding-bottom: 10px;
     font-size: 12px;
-    
 }
 
 .image {

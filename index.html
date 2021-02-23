@@ -16,12 +16,12 @@
             <img src="assets/logo.png" alt="">
         </div>
         <div class="menu-itens">
-            <ul>
-                <li id="home"><i class="fa fa-home" aria-hidden="true"></i></li>
-                <li><i class="fa fa-bookmark" aria-hidden="true"></i></li>
-                <li><i class="fa fa-comment" aria-hidden="true"></i></li>
-                <li><i class="fa fa-user" aria-hidden="true"></i></li>
-                <li><i class="fa fa-cog" aria-hidden="true"></i></li>
+            <ul class="menu-itens-list">
+                <li id="home" class="activeMenu" onclick="checkedMenu(1)"><i class="fa fa-home" aria-hidden="true"></i></li>
+                <li id="mark" onclick="checkedMenu(2)"><i class="fa fa-bookmark" aria-hidden="true"></i></li>
+                <li id="chat" onclick="checkedMenu(3)"><i class="fa fa-comment" aria-hidden="true"></i></li>
+                <li id="profile" onclick="checkedMenu(4)"><i class="fa fa-user" aria-hidden="true"></i></li>
+                <li id="config" onclick="checkedMenu(5)"><i class="fa fa-cog" aria-hidden="true"></i></li>
             </ul>
         </div>
     </aside>
@@ -34,14 +34,18 @@
             <div class="search">
                 <ul>
                     <li><i class="fa fa-search" aria-hidden="true"></i></li>
-                    <li><i class="fa fa-bell" aria-hidden="true"></i></li>
+                    <li id="bell"><i class="fa fa-bell" aria-hidden="true"></i></li>
                     <li><i class="fa fa-user-circle-o" aria-hidden="true"></i></li>
                 </ul>
             </div>
         </div>
         <div class="games">
-            <div class="title-games">
+            <div class="title">
                 <h2>Games</h2>
+                <ul>
+                    <li><i class="fa fa-arrow-left" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i></li>
+                </ul>
             </div>
             <div class="container-games">
                 <div class="cards-carrousel">
@@ -95,14 +99,18 @@
                             <img src="assets/wheels.png" alt="">
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
 
         </div>
         <div class="last-played">
-            <div class="title-last">
+            <div class="title">
                 <h2>Last Played</h2>
+                <ul>
+                    <li><i class="fa fa-arrow-left" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i></li>
+                </ul>
             </div>
             <div class="container-last-games">
                 <div class="cards-last-carrousel">
@@ -155,30 +163,34 @@
             </div>
         </div>
         <div class="game-type">
-            <div class="title-type">
+            <div class="title">
                 <h2>Action Games</h2>
+                <ul>
+                    <li><i class="fa fa-arrow-left" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i></li>
+                </ul>
             </div>
             <div class="container-type-games">
                 <div class="cards-carrousel-type">
-                    <div class="card" id="1" onclick="checked(1)">
+                    <div class="card" id="1" onclick="checkedGame(1)">
                         <div class="image-box">
                             <img src="assets/header.jpg" alt="">
                         </div>
                         <h2>PUGB</h2>
                     </div>
-                    <div class="card" id="2" onclick="checked(2)">
+                    <div class="card" id="2" onclick="checkedGame(2)">
                         <div class="image-box">
                             <img src="assets/horizon.jpg" alt="">
                         </div>
                         <h2>Horizon Zero Dawn</h2>
                     </div>
-                    <div class="card" id="3" onclick="checked(3)">
+                    <div class="card" id="3" onclick="checkedGame(3)">
                         <div class="image-box">
                             <img src="assets/ror2.jpg" alt="">
                         </div>
                         <h2>Risk of Rain 2</h2>
                     </div>
-                    <div class="card" id="4" onclick="checked(4)">
+                    <div class="card" id="4" onclick="checkedGame(4)">
                         <div class="image-box">
                             <img src="assets/csgo.jpg" alt="">
                         </div>
@@ -263,28 +275,42 @@
     </aside>
 
     <script>
-        const chield = document.querySelector('.game-info')
-        const cardsGame = document.querySelector('.cards-carrousel') 
+        const info = document.querySelector('.game-info')
+        const menuItem = document.querySelector('.menu-itens-list')
+        const cardsGame = document.querySelector('.cards-carrousel')
         const cardsType = document.querySelector('.cards-carrousel-type')
-        console.log(cardsType.children)
-        const checked = (item) =>{ 
-                for(let i = 0 ; i <= cardsType.children.length+1; i++){
-                    if(cardsType.children[i].id == item){
-                        
+        console.log(cardsGame.children[0].id)
+        const checkedGame = (item) => {
+                for (let i = 0; i <= cardsType.children.length + 1; i++) {
+                    if (cardsType.children[i].id == item) {
+                        console.log(cardsGame.children[i].id)
                         cardsType.children[i].classList.add('active');
                         continue
                     }
                     cardsType.children[i].classList.remove('active');
-                }      
-        }
+                }
+            }
+            // const reload = () = {
+
+        // }
         const checkedCategory = (item) => {
-            for(let i = 0 ; i < cardsGame.children.length; i++){
-                    if(cardsGame.children[i].id == item){
-                        cardsGame.children[i].classList.add('activeCategory');
-                        continue
-                    }
-                    cardsGame.children[i].classList.remove('activeCategory');
-                } 
+            for (let i = 0; i < cardsGame.children.length; i++) {
+                if (cardsGame.children[i].id == item) {
+                    cardsGame.children[i].classList.add('activeCategory');
+                    continue
+                }
+                cardsGame.children[i].classList.remove('activeCategory');
+            }
+        }
+        const checkedMenu = (item) => {
+            let menus = ['home', 'mark', 'chat', 'profile', 'config']
+            for (let i = 0; i < menuItem.children.length; i++) {
+                if (menuItem.children[i].id == menus[item - 1]) {
+                    menuItem.children[i].classList.add('activeMenu');
+                    continue
+                }
+                menuItem.children[i].classList.remove('activeMenu');
+            }
         }
     </script>
 </body>
