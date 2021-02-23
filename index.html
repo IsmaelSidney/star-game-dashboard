@@ -49,7 +49,7 @@
             </div>
             <div class="container-games">
                 <div class="cards-carrousel">
-                    <div class="card" id="1" onclick="checkedCategory(1)">
+                    <div class="card activeCategory" id="1" onclick="checkedCategory(1)">
                         <div class="content">
                             <img src="assets/play.png" alt="">
                             <h2>Adventure</h2>
@@ -172,7 +172,7 @@
             </div>
             <div class="container-type-games">
                 <div class="cards-carrousel-type">
-                    <div class="card" id="1" onclick="checkedGame(1)">
+                    <div class="card active" id="1" onclick="checkedGame(1)">
                         <div class="image-box">
                             <img src="assets/header.jpg" alt="">
                         </div>
@@ -274,45 +274,7 @@
 
     </aside>
 
-    <script>
-        const info = document.querySelector('.game-info')
-        const menuItem = document.querySelector('.menu-itens-list')
-        const cardsGame = document.querySelector('.cards-carrousel')
-        const cardsType = document.querySelector('.cards-carrousel-type')
-        console.log(cardsGame.children[0].id)
-        const checkedGame = (item) => {
-                for (let i = 0; i <= cardsType.children.length + 1; i++) {
-                    if (cardsType.children[i].id == item) {
-                        console.log(cardsGame.children[i].id)
-                        cardsType.children[i].classList.add('active');
-                        continue
-                    }
-                    cardsType.children[i].classList.remove('active');
-                }
-            }
-            // const reload = () = {
-
-        // }
-        const checkedCategory = (item) => {
-            for (let i = 0; i < cardsGame.children.length; i++) {
-                if (cardsGame.children[i].id == item) {
-                    cardsGame.children[i].classList.add('activeCategory');
-                    continue
-                }
-                cardsGame.children[i].classList.remove('activeCategory');
-            }
-        }
-        const checkedMenu = (item) => {
-            let menus = ['home', 'mark', 'chat', 'profile', 'config']
-            for (let i = 0; i < menuItem.children.length; i++) {
-                if (menuItem.children[i].id == menus[item - 1]) {
-                    menuItem.children[i].classList.add('activeMenu');
-                    continue
-                }
-                menuItem.children[i].classList.remove('activeMenu');
-            }
-        }
-    </script>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
